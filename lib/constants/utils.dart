@@ -139,7 +139,7 @@ String checkStatus(List studyDays, String day) {
 
     if (studyDays[index]['studyDay']  == day.toString() &&
         studyDays[index]['attendance'] ==  '2') {
-      status = '2';
+        status = '2';
     }
     if (studyDays[index]['studyDay']  == day.toString() &&
         studyDays[index]['attendance'] ==  '1') {

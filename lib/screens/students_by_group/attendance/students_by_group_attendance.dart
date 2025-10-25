@@ -240,167 +240,165 @@ class Attendance extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
-    //           Expanded(
-    //               child: InkWell(
-    //             onTap: () async {
-    //               if (selectedStudents.isEmpty) {
-    //                 Get.snackbar(
-    //                   'Xatolik', // Title
-    //                   'Talabalar tanlanmagan', // Message
-    //                   snackPosition: SnackPosition.TOP,
-    //                   // Position of the snackbar
-    //                   backgroundColor: Colors.red,
-    //                   colorText: Colors.white,
-    //                   borderRadius: 8,
-    //                   margin: EdgeInsets.all(10),
-    //                 );
-    //               } else {
-    //                 showDialog(
-    //                   context: context,
-    //                   builder: (BuildContext context) {
-    //                     return Dialog(
-    //                       backgroundColor: Colors.white,
-    //                       insetPadding: EdgeInsets.symmetric(horizontal: 16),
-    //                       shape: RoundedRectangleBorder(
-    //                           borderRadius: BorderRadius.circular(12.0)),
-    //                       //this right here
-    //                       child: Container(
-    //                         padding: EdgeInsets.all(16),
-    //                         decoration: BoxDecoration(
-    //                             color: Colors.white,
-    //                             borderRadius: BorderRadius.circular(12)),
-    //                         width: Get.width,
-    //                         height: 180,
-    //                         child: Column(
-    //                           crossAxisAlignment: CrossAxisAlignment.center,
-    //                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    //                           children: [
-    //                             Column(
-    //                               mainAxisAlignment: MainAxisAlignment.center,
-    //                               crossAxisAlignment: CrossAxisAlignment.center,
-    //                               children: [
-    //                                 SizedBox(
-    //                                   height: 16,
-    //                                 ),
-    //                                 Text(
-    //                                   'Rostdanham yuborilsinmi ?',
-    //                                   style: appBarStyle.copyWith(),
-    //                                   textAlign: TextAlign.center,
-    //                                 ),
-    //                                 SizedBox(
-    //                                   height: 16,
-    //                                 ),
-    //                               ],
-    //                             ),
-    //                             Row(
-    //                               mainAxisAlignment:
-    //                                   MainAxisAlignment.spaceEvenly,
-    //                               children: [
-    //                                 TextButton(
-    //                                   onPressed: () async {
-    //                                     Get.back();
-    //                                     messageLoader.value = true;
-    // for (int i = 0;  i < selectedStudents.length;  i++) {
-    //
-    //   // kelgan o'quvchilarga sms bormaydi
-    // // if (checkStatus(   selectedStudents[i]  ['studyDays'],   studentController  .selectedStudyDate   .value) ==
-    // //                                           'true') {
-    // //                                         if (await Permission
-    // //                                                 .sms.isGranted &&
-    // //                                             selectedStudents[i]['phone']
-    // //                                                 .toString()
-    // //                                                 .isNotEmpty) {
-    // //                                           _smsService.sendSMS(
-    // //                                               selectedStudents[i]['phone'],
-    // //                                               "Assalomu Aleykum ,"
-    // //                                               "\nFarzandingiz ${selectedStudents[i]['surname'].toString().capitalizeFirst}  ${selectedStudents[i]['name'].toString().capitalizeFirst!}  bugungi  darsga keldi. "
-    // //                                               "\nHurmat bilan Markaz SCHOOL");
-    // //                                         }
-    // //                                       }
-    // //
-    // // else
-    //
-    //   if (checkStatus(
-    //                                               selectedStudents[i]
-    //                                                   ['studyDays'],
-    //                                               studentController
-    //                                                   .selectedStudyDate
-    //                                                   .value) ==
-    //                                           'false') {
-    //                                         if (await Permission
-    //                                                 .sms.isGranted &&
-    //                                             selectedStudents[i]['phone']
-    //                                                 .toString()
-    //                                                 .isNotEmpty) {
-    //                                           var sabab = hasReason(
-    //                                                   selectedStudents[i]
-    //                                                       ['studyDays'],
-    //                                                   studentController
-    //                                                       .selectedStudyDate
-    //                                                       .value)
-    //                                               ? "sababli"
-    //                                               : "sababsiz";
-    //
-    //                                           _smsService.sendSMS(
-    //                                               selectedStudents[i]['phone'],
-    //                                               ""
-    //                                               "Assalomu Aleykum ,"
-    //                                               "\nFarzandingiz ${selectedStudents[i]['surname'].toString().capitalizeFirst!}  ${selectedStudents[i]['name'].toString().capitalizeFirst!}  bugungi   darsga $sabab kelmadi. "
-    //                                               "\nHurmat bilan Markaz SCHOOL");
-    //                                         }
-    //                                       } else {
-    //                                         print('Sms yuborilmadi');
-    //                                       }
-    //                                       await Future.delayed(
-    //                                           Duration(seconds: 1));
-    //                                     }
-    //
-    //                                     messageLoader.value = false;
-    //                                     selectedStudents.clear();
-    //                                     isStudentChoosen.value = false;
-    //
-    //                                     Get.snackbar(
-    //                                       'Xabar', // Title
-    //                                       'Xabar yuborildi',
-    //                                       // Message
-    //                                       snackPosition: SnackPosition.BOTTOM,
-    //                                       // Position of the snackbar
-    //                                       backgroundColor: Colors.green,
-    //                                       colorText: Colors.white,
-    //                                       borderRadius: 8,
-    //                                       margin: EdgeInsets.all(10),
-    //                                     );
-    //                                   },
-    //                                   child: Text(
-    //                                     'Tasdiqlash'.tr.capitalizeFirst!,
-    //                                     style: appBarStyle.copyWith(
-    //                                         color: Colors.green),
-    //                                   ),
-    //                                 ),
-    //                                 TextButton(
-    //                                     onPressed: Get.back,
-    //                                     child: Text(
-    //                                       'Bekor',
-    //                                       style: appBarStyle.copyWith(
-    //                                           color: Colors.red),
-    //                                     )),
-    //                               ],
-    //                             )
-    //                           ],
-    //                         ),
-    //                       ),
-    //                     );
-    //                   },
-    //                 );
-    //               }
-    //             },
-    //             child: Obx(() => CustomButton(
-    //                   color: Colors.green,
-    //                   text: messageLoader.value
-    //                       ? "Sending ..."
-    //                       : 'Davomat'.tr.capitalizeFirst!,
-    //                 )),
-    //           )),
+              Expanded(
+                  child: InkWell(
+                onTap: () async {
+                  if (selectedStudents.isEmpty) {
+                    Get.snackbar(
+                      'Xatolik', // Title
+                      'Talabalar tanlanmagan', // Message
+                      snackPosition: SnackPosition.TOP,
+                      // Position of the snackbar
+                      backgroundColor: Colors.red,
+                      colorText: Colors.white,
+                      borderRadius: 8,
+                      margin: EdgeInsets.all(10),
+                    );
+                  } else {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Dialog(
+                          backgroundColor: Colors.white,
+                          insetPadding: EdgeInsets.symmetric(horizontal: 16),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12.0)),
+                          //this right here
+                          child: Container(
+                            padding: EdgeInsets.all(16),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(12)),
+                            width: Get.width,
+                            height: 180,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    SizedBox(
+                                      height: 16,
+                                    ),
+                                    Text(
+                                      'Rostdanham yuborilsinmi ?',
+                                      style: appBarStyle.copyWith(),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(
+                                      height: 16,
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    TextButton(
+                                      onPressed: () async {
+                                        Get.back();
+                                        messageLoader.value = true;
+    for (int i = 0;  i < selectedStudents.length;  i++) {
+
+
+     if (checkStatus(   selectedStudents[i]  ['studyDays'],   studentController  .selectedStudyDate   .value) ==
+                                              '2') {
+                                            if (await Permission
+                                                    .sms.isGranted &&
+                                                selectedStudents[i]['phone']
+                                                    .toString()
+                                                    .isNotEmpty) {
+                                              _smsService.sendSMS(
+                                                  selectedStudents[i]['phone'],
+                                                  "Assalomu Aleykum ,"
+                                                  "\nFarzandingiz ${selectedStudents[i]['surname'].toString().capitalizeFirst}  ${selectedStudents[i]['name'].toString().capitalizeFirst!}  bugungi  darsga keldi. "
+                                                   );
+                                            }
+                                          }
+
+    else if (checkStatus( selectedStudents[i] ['studyDays'], studentController .selectedStudyDate .value) == '-1') {
+         if (await Permission .sms.isGranted &&selectedStudents[i]['phone'].toString()  .isNotEmpty) {
+
+
+                  _smsService.sendSMS(  selectedStudents[i]['phone'],
+
+                                                  "Assalomu Aleykum ,"
+                                                  "\nFarzandingiz ${selectedStudents[i]['surname'].toString().capitalizeFirst!}  ${selectedStudents[i]['name'].toString().capitalizeFirst!}  bugungi   darsga kelmadi. "
+                                                   );
+                                            }
+                                          }
+    else if (checkStatus( selectedStudents[i] ['studyDays'], studentController .selectedStudyDate .value) == '1') {
+         if (await Permission .sms.isGranted &&selectedStudents[i]['phone'].toString()  .isNotEmpty) {
+
+
+                  _smsService.sendSMS(  selectedStudents[i]['phone'],
+
+                                                  "Assalomu Aleykum ,"
+                                                  "\nFarzandingiz ${selectedStudents[i]['surname'].toString().capitalizeFirst!}  ${selectedStudents[i]['name'].toString().capitalizeFirst!} bugungi darsga kech keldi. "
+                                                   );
+                                            }
+                                          }
+
+
+
+
+
+
+    else {
+                                            print('Sms yuborilmadi');
+                                          }
+                                          await Future.delayed(
+                                              Duration(seconds: 1));
+                                        }
+
+                                        messageLoader.value = false;
+                                        selectedStudents.clear();
+                                        isStudentChoosen.value = false;
+
+                                        Get.snackbar(
+                                          'Xabar', // Title
+                                          'Xabar yuborildi',
+                                          // Message
+                                          snackPosition: SnackPosition.BOTTOM,
+                                          // Position of the snackbar
+                                          backgroundColor: Colors.green,
+                                          colorText: Colors.white,
+                                          borderRadius: 8,
+                                          margin: EdgeInsets.all(10),
+                                        );
+                                      },
+                                      child: Text(
+                                        'Tasdiqlash'.tr.capitalizeFirst!,
+                                        style: appBarStyle.copyWith(
+                                            color: Colors.green),
+                                      ),
+                                    ),
+                                    TextButton(
+                                        onPressed: Get.back,
+                                        child: Text(
+                                          'Bekor',
+                                          style: appBarStyle.copyWith(
+                                              color: Colors.red),
+                                        )),
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      },
+                    );
+                  }
+                },
+                child: Obx(() => CustomButton(
+                      color: Colors.green,
+                      text: messageLoader.value
+                          ? "Sending ..."
+                          : 'Davomat'.tr.capitalizeFirst!,
+                    )),
+              )),
               box.read('isLogged') == '0094' || box.read('isLogged') == '1105'
                   ? Expanded(
                       child: InkWell(
@@ -631,7 +629,7 @@ class Attendance extends StatelessWidget {
                                                       selectedStudents[i]
                                                           ['phone'],
                                                       customMessage.text +
-                                                          "\nHurmat bilan Markaz SCHOOL");
+                                                          "");
                                                 }
 
                                                 await Future.delayed(

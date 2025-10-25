@@ -62,7 +62,7 @@ class _AdminGroupsState extends State<AdminGroups> {
         backgroundColor: dashBoardColor,
         toolbarHeight: 64,
         title: Text(
-          "Markaz Education",
+          "",
           style: appBarStyle.copyWith(color: Colors.white),
         ),
         actions: [
@@ -226,13 +226,17 @@ class _AdminGroupsState extends State<AdminGroups> {
                                     SizedBox(
                                       width: 8,
                                     ),
-                                    Text(
-                                      documents[i]['items']['name']
-                                          .toString(),
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w700,
-                                        color: Colors.black,
-                                        fontSize: 14,
+                                    Container(
+                                      width: Get.width/2,
+                                      child: Text(
+                                        documents[i]['items']['name']
+                                            .toString(),
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                          fontSize: 14,
+                                        ),
+                                        overflow: TextOverflow.visible,
                                       ),
                                     )
                                   ],

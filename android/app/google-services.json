@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1082291752527",
-    "project_id": "markazinkarmana",
-    "storage_bucket": "markazinkarmana.firebasestorage.app"
+    "project_number": "925704059432",
+    "project_id": "hojiyevschool",
+    "storage_bucket": "hojiyevschool.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1082291752527:android:d718d3d74511d337fae43a",
+        "mobilesdk_app_id": "1:925704059432:android:5e9ca52178e4f4b943d31d",
         "android_client_info": {
           "package_name": "com.example.karmana_markaz"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBCepVYciO36fYEm8o7crq_7RO2ukbfuHk"
+          "current_key": "AIzaSyCLh0_7WatmWKjX--XeI78fUUsu7Y-sp70"
         }
       ],
       "services": {
